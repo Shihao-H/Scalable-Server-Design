@@ -1,2 +1,37 @@
+
 ## Scalable-server-design
-First, do a 'make' on current directory to compile all the code, then 'cd src', start the server "cs455.scaling.server.Server portnum thread-pool-size batch-size batch-time", then "cd .."  back to the original directory, start clients by executing the bash file 'runClient'.sh, you need to give it an extra augument as $1 when running the 'runClient'.sh script and specify the host machine.
+
+
+### Usage:
+
+Place the ***makefile*** in current directory.
+
+```sh
+$ mkdir bin
+$ cd ..
+$ make
+$ cd bin
+```
+
+```sh
+$ java cs455.scaling.server.Server portnum thread-pool-size batch-size batch-time
+```
+
+The launch another terminal and cd into the bin folder.
+
+```sh
+$ cd bin
+```
+
+Make sure you place the ***runClient.sh*** and ***machine_list*** file inside the bin folder as well. the script will look for it.  machine_list has 20 machines and specify the argument to 5 can launch 100 clients.
+
+```sh
+$ runClient.sh 5
+```
+
+* Clean the .class file in bin folder
+
+```sh
+$ make clean
+```
+
