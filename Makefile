@@ -6,4 +6,4 @@ clean:
 
 compile: 
 	@echo -e '[INFO] Compiling the Source..'
-	@javac -d bin src/cs455/scaling/server/task/*.java src/cs455/scaling/**/*.java
+	@javac -Xlint -d bin src/cs455/scaling/server/task/*.java src/cs455/scaling/**/*.java
