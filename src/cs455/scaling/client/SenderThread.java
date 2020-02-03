@@ -39,17 +39,13 @@ public class SenderThread extends Thread
     	while(channel!=null)
     	{
     		hasher = Hasher.getInstance();
-//        	buffer = ByteBuffer.wrap("Test".getBytes());
-//    		byte[] message = new String("Test").getBytes();
     		try {
         		rd.nextBytes(message);	
     			String str = hasher.SHA1FromBytes(message);
     			buffer = ByteBuffer.allocate(0x2000);
-            	buffer = ByteBuffer.wrap(message);	
+            		buffer = ByteBuffer.wrap(message);	
     			hashlist.add(str);
-//    			System.out.println("OriginalByte: "+message);
-//    			System.out.println("Original: "+str);
-//    			System.out.println("yuanshi string: "+new String(message));
+
 			} catch (NoSuchAlgorithmException e2) {
 				e2.printStackTrace();
 			}
